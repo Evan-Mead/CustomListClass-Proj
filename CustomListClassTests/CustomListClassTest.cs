@@ -193,7 +193,7 @@ namespace CustomListClassTests
         }
 
         [TestMethod]
-        public void Addhree_CheckCapacity()
+        public void AddThree_CheckCapacity()
         {
             CustomList<string> words = new CustomList<string>();
             int expected = 4;
