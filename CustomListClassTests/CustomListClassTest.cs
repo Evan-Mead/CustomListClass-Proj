@@ -358,7 +358,7 @@ namespace CustomListClassTests
         {
             // arrange
             CustomList<int> numbers = new CustomList<int>();
-            int expected = 4;
+            int expected = 5;
             int actual;
 
             // act
@@ -368,7 +368,7 @@ namespace CustomListClassTests
             numbers.Add(4);
             numbers.Add(5);
 
-            numbers.Remove(5);
+            numbers.Remove(1);
 
             actual = numbers[3];
 
@@ -380,7 +380,7 @@ namespace CustomListClassTests
         public void RemoveTwo_CheckIndexTwo()
         {
             CustomList<int> numbers = new CustomList<int>();
-            int expected = 3;
+            int expected = 5;
             int actual;
 
             numbers.Add(1);
@@ -389,8 +389,8 @@ namespace CustomListClassTests
             numbers.Add(4);
             numbers.Add(5);
 
-            numbers.Remove(5);
-            numbers.Remove(4);
+            numbers.Remove(1);
+            numbers.Remove(2);
 
             actual = numbers[2];
 
@@ -401,7 +401,7 @@ namespace CustomListClassTests
         public void RemoveThree_CheckIndexOne()
         {
             CustomList<int> numbers = new CustomList<int>();
-            int expected = 2;
+            int expected = 5;
             int actual;
 
             numbers.Add(1);
@@ -410,8 +410,8 @@ namespace CustomListClassTests
             numbers.Add(4);
             numbers.Add(5);
 
-            numbers.Remove(5);
-            numbers.Removes(4);
+            numbers.Remove(1);
+            numbers.Remove(2);
             numbers.Remove(3);
 
             actual = numbers[1];
@@ -423,7 +423,7 @@ namespace CustomListClassTests
         public void RemoveFour_CheckIndexZero()
         {
             CustomList<int> numbers = new CustomList<int>();
-            int expected = 1;
+            int expected = 5;
             int actual;
 
             numbers.Add(1);
@@ -432,10 +432,10 @@ namespace CustomListClassTests
             numbers.Add(4);
             numbers.Add(5);
 
-            numbers.Remove(5);
-            numbers.Removes(4);
-            numbers.Remove(3);
+            numbers.Remove(1);
             numbers.Remove(2);
+            numbers.Remove(3);
+            numbers.Remove(4);
 
             actual = numbers[0];
 
@@ -456,7 +456,7 @@ namespace CustomListClassTests
             numbers.Add(5);
 
             numbers.Remove(5);
-            numbers.Removes(4);
+            numbers.Remove(4);
             numbers.Remove(3);
             numbers.Remove(2);
             numbers.Remove(1);
