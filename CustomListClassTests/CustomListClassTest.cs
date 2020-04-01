@@ -240,5 +240,230 @@ namespace CustomListClassTests
             Assert.AreEqual(expected, actual);
         }
 
+
+        [TestMethod]
+        public void RemoveOne_CheckCountFour()
+        {
+            // arrange
+            CustomList<int> numbers = new CustomList<int>();
+            int expected = 4;
+            int actual;
+
+            // act
+            numbers.Add(1);
+            numbers.Add(2);
+            numbers.Add(3);
+            numbers.Add(4);
+            numbers.Add(5);
+  
+            numbers.Remove(5);
+
+            actual = numbers.Count;
+
+            // assert
+            Assert.AreEqual(expected, actual);
+        }
+
+        [TestMethod]
+        public void RemoveTwo_CheckCountThree()
+        {
+            CustomList<int> numbers = new CustomList<int>();
+            int expected = 3;
+            int actual;
+
+            numbers.Add(1);
+            numbers.Add(2);
+            numbers.Add(3);
+            numbers.Add(4);
+            numbers.Add(5);
+
+            numbers.Remove(5);
+            numbers.Remove(4);
+
+            actual = numbers.Count;
+            Assert.AreEqual(expected, actual);
+        }
+
+        [TestMethod]
+        public void RemoveThree_CheckCountTwo()
+        {
+            CustomList<int> numbers = new CustomList<int>();
+            int expected = 2;
+            int actual;
+
+            numbers.Add(1);
+            numbers.Add(2);
+            numbers.Add(3);
+            numbers.Add(4);
+            numbers.Add(5);
+
+            numbers.Remove(5);
+            numbers.Remove(4);
+            numbers.remove(3);
+
+            actual = numbers.Count;
+
+            Assert.AreEqual(expected, actual);
+        }
+
+        [TestMethod]
+        public void RemoveFour_CheckCountOne()
+        {
+            CustomList<int> numbers = new CustomList<int>();
+            int expected = 1;
+            int actual;
+
+            numbers.Add(1);
+            numbers.Add(2);
+            numbers.Add(3);
+            numbers.Add(4);
+            numbers.Add(5);
+
+            numbers.Remove(5);
+            numbers.Remove(4);
+            numbers.Remove(3);
+            numbers.Remove(2);
+
+            actual = numbers.Count;
+
+            Assert.AreEqual(expected, actual);
+        }
+
+        [TestMethod]
+        public void RemoveFive_CheckCountZero()
+        {
+            CustomList<int> numbers = new CustomList<int>();
+            int expected = 0;
+            int actual;
+
+            numbers.Add(1);
+            numbers.Add(2);
+            numbers.Add(3);
+            numbers.Add(4);
+            numbers.Add(5);
+
+            numbers.Remove(5);
+            numbers.Remove(4);
+            numbers.remove(3);
+            numbers.Remove(2);
+            numbers.Remove(1);
+
+            actual = numbers.Count;
+
+            Assert.AreEqual(expected, actual);
+        }
+
+        [TestMethod]
+        public void RemoveOne_CheckIndexThree()
+        {
+            // arrange
+            CustomList<int> numbers = new CustomList<int>();
+            int expected = 4;
+            int actual;
+
+            // act
+            numbers.Add(1);
+            numbers.Add(2);
+            numbers.Add(3);
+            numbers.Add(4);
+            numbers.Add(5);
+
+            numbers.Remove(5);
+
+            actual = numbers[3];
+
+            // assert
+            Assert.AreEqual(expected, actual);
+        }
+
+        [TestMethod]
+        public void RemoveTwo_CheckIndexTwo()
+        {
+            CustomList<int> numbers = new CustomList<int>();
+            int expected = 3;
+            int actual;
+
+            numbers.Add(1);
+            numbers.Add(2);
+            numbers.Add(3);
+            numbers.Add(4);
+            numbers.Add(5);
+
+            numbers.Remove(5);
+            numbers.Remove(4);
+
+            actual = numbers[2];
+
+            Assert.AreEqual(expected, actual);
+        }
+
+        [TestMethod]
+        public void RemoveThree_CheckIndexOne()
+        {
+            CustomList<int> numbers = new CustomList<int>();
+            int expected = 2;
+            int actual;
+
+            numbers.Add(1);
+            numbers.Add(2);
+            numbers.Add(3);
+            numbers.Add(4);
+            numbers.Add(5);
+
+            numbers.Remove(5);
+            numbers.Removes(4);
+            numbers.Remove(3);
+
+            actual = numbers[1];
+
+            Assert.AreEqual(expected, actual);
+        }
+
+        [TestMethod]
+        public void RemoveFour_CheckIndexZero()
+        {
+            CustomList<int> numbers = new CustomList<int>();
+            int expected = 1;
+            int actual;
+
+            numbers.Add(1);
+            numbers.Add(2);
+            numbers.Add(3);
+            numbers.Add(4);
+            numbers.Add(5);
+
+            numbers.Remove(5);
+            numbers.Removes(4);
+            numbers.Remove(3);
+            numbers.Remove(2);
+
+            actual = numbers[0];
+
+            Assert.AreEqual(expected, actual);
+        }
+
+        [TestMethod]
+        public void RemoveFive_CheckIndex()
+        {
+            CustomList<int> numbers = new CustomList<int>();
+            int expected = 0;
+            int actual;
+
+            numbers.Add(1);
+            numbers.Add(2);
+            numbers.Add(3);
+            numbers.Add(4);
+            numbers.Add(5);
+
+            numbers.Remove(5);
+            numbers.Removes(4);
+            numbers.Remove(3);
+            numbers.Remove(2);
+            numbers.Remove(1);
+
+            actual = numbers[0];
+
+            Assert.AreEqual(expected, actual);
+        }
     }
 }
