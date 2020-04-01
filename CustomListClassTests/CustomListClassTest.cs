@@ -126,7 +126,7 @@ namespace CustomListClassTests
             numbers.Add(3);
             actual = numbers[2];
 
-            Assert.AreEqual.(expected, actual);
+            Assert.AreEqual(expected, actual);
         }
 
         [TestMethod]
@@ -142,7 +142,7 @@ namespace CustomListClassTests
             numbers.Add(4);
             actual = numbers[3];
 
-            Assert.AreEqual.(expected, actual);
+            Assert.AreEqual(expected, actual);
         }
 
         [TestMethod]
@@ -242,21 +242,3 @@ namespace CustomListClassTests
 
     }
 }
-
-
-
-//// arrange
-//Comparing comparing = new Comparing();
-//bool expected = true;
-//bool actual = false;
-
-
-//// act
-//comparing.result = true;
-//comparing.CompareInts();
-//if (comparing.firstValue == 1 && comparing.secondValue == 1)
-//{
-//    actual = true;
-//}
-
-// assert
