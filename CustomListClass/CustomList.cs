@@ -21,29 +21,31 @@ namespace CustomListClass
 
         public void Add(T item)
         {
-            //check count == capacity before adding to list
-            //increase capacity in here
-
-            if (Count == Capacity)
+            while (Count >= 0 || Count < Capacity)
             {
-                Capacity = Capacity * 2;
+                Count++;
             }
 
+            if (Count >= Capacity)
+            {
+                Capacity = Capacity * 2;
+                TempArray<T>(ref item);
+            }
+            else
+            {
+                Count++;
+            }
+
+            items = new T[Capacity];
+
+            items[Count] = item;
+            Count++;
+        }
+
+        public void TempArray<T>(ref T item)
+        {
             T tempArray;
-            tempArray = new T[item];
-
-            // items: david evan mike brett
-            // tempArray: david evan mike brett
-
-            // items: null null null null null null null null
-
-            // items: david evan mike brett null null null null
-
-
-                items = new T[Capacity];
-                
-                 
-            
+            tempArray =  item;
         }
 
         // indexer is a property
