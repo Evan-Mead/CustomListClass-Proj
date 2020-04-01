@@ -19,7 +19,7 @@ namespace CustomListClass
             items = new T[Capacity];
         }
 
-        public void Add(T item)
+        public void CheckCapacity()
         {
             while (Count >= 0 || Count < Capacity)
             {
@@ -29,25 +29,20 @@ namespace CustomListClass
             if (Count >= Capacity)
             {
                 Capacity = Capacity * 2;
-                TempArray<T>(ref item);
+                T[] tempArray = new T[Count];
+                for (int i = 0; i < Count; i++)
+                {
+                    tempArray[i] = items[i];
+                }
+                items = tempArray;
             }
-            else
-            {
-                Count++;
-            }
+        }
 
-            items = new T[Capacity];
-
+        public void Add(T item)
+        {
+            CheckCapacity();
             items[Count] = item;
             Count++;
         }
-
-        public void TempArray<T>(ref T item)
-        {
-            T tempArray;
-            tempArray =  item;
-        }
-
-        // indexer is a property
     }
 }
