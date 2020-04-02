@@ -7,7 +7,7 @@ namespace CustomListClassTests
     public class CustomListClassTests
     {
         [TestMethod]
-        public void AddOne_CheckCountOne()
+        public void Add_One_CheckCountOne()
         {
             // arrange
             CustomList<int> numbers = new CustomList<int>();
@@ -23,7 +23,7 @@ namespace CustomListClassTests
         }
 
         [TestMethod]
-        public void AddTwo_CheckCountTwo()
+        public void Add_Two_CheckCountTwo()
         {
             CustomList<int> numbers = new CustomList<int>();
             int expected = 2;
@@ -37,7 +37,7 @@ namespace CustomListClassTests
         }
 
         [TestMethod]
-        public void AddThree_CheckCountThree()
+        public void Add_Three_CheckCountThree()
         {
             CustomList<int> numbers = new CustomList<int>();
             int expected = 3;
@@ -52,7 +52,7 @@ namespace CustomListClassTests
         }
 
         [TestMethod]
-        public void AddFour_CheckCountFour()
+        public void Add_Four_CheckCountFour()
         {
             CustomList<int> numbers = new CustomList<int>();
             int expected = 4;
@@ -68,7 +68,7 @@ namespace CustomListClassTests
         }
 
         [TestMethod]
-        public void AddFive_CheckCountFive()
+        public void Add_Five_CheckCountFive()
         {
             CustomList<int> numbers = new CustomList<int>();
             int expected = 5;
@@ -85,7 +85,7 @@ namespace CustomListClassTests
         }
 
         [TestMethod]
-        public void AddOne_CheckIndexZero()
+        public void Add_One_CheckIndexZero()
         {
             // arrange
             CustomList<int> numbers = new CustomList<int>();
@@ -101,7 +101,7 @@ namespace CustomListClassTests
         }
 
         [TestMethod]
-        public void AddTwo_CheckIndexOne()
+        public void Add_Two_CheckIndexOne()
         {
             CustomList<int> numbers = new CustomList<int>();
             int expected = 2;
@@ -115,7 +115,7 @@ namespace CustomListClassTests
         }
 
         [TestMethod]
-        public void AddThree_CheckIndexTwo()
+        public void Add_Three_CheckIndexTwo()
         {
             CustomList<int> numbers = new CustomList<int>();
             int expected = 3;
@@ -130,7 +130,7 @@ namespace CustomListClassTests
         }
 
         [TestMethod]
-        public void AddFour_CheckIndexThree()
+        public void Add_Four_CheckIndexThree()
         {
             CustomList<int> numbers = new CustomList<int>();
             int expected = 4;
@@ -146,7 +146,7 @@ namespace CustomListClassTests
         }
 
         [TestMethod]
-        public void AddFive_CheckIndexFour()
+        public void Add_Five_CheckIndexFour()
         {
             CustomList<int> numbers = new CustomList<int>();
             int expected = 5;
@@ -163,7 +163,7 @@ namespace CustomListClassTests
         }
 
         [TestMethod]
-        public void AddOne_CheckCapacity()
+        public void Add_One_CheckCapacity()
         {
             // arrange
             CustomList<string> words = new CustomList<string>();
@@ -179,7 +179,7 @@ namespace CustomListClassTests
         }
 
         [TestMethod]
-        public void AddTwo_CheckCapacity()
+        public void Add_Two_CheckCapacity()
         {
             CustomList<string> words = new CustomList<string>();
             int expected = 4;
@@ -193,7 +193,7 @@ namespace CustomListClassTests
         }
 
         [TestMethod]
-        public void AddThree_CheckCapacity()
+        public void Add_Three_CheckCapacity()
         {
             CustomList<string> words = new CustomList<string>();
             int expected = 4;
@@ -208,7 +208,7 @@ namespace CustomListClassTests
         }
 
         [TestMethod]
-        public void AddFour_CheckCapacity()
+        public void Add_Four_CheckCapacity()
         {
             CustomList<string> words = new CustomList<string>();
             int expected = 4;
@@ -224,7 +224,7 @@ namespace CustomListClassTests
         }
 
         [TestMethod]
-        public void AddFive_CheckCapacity()
+        public void Add_Five_CheckCapacity()
         {
             CustomList<string> words = new CustomList<string>();
             int expected = 8;
@@ -242,7 +242,7 @@ namespace CustomListClassTests
 
 
         [TestMethod]
-        public void RemoveOne_CheckCountFour()
+        public void Remove_One_CheckCountFour()
         {
             // arrange
             CustomList<int> numbers = new CustomList<int>();
@@ -265,7 +265,7 @@ namespace CustomListClassTests
         }
 
         [TestMethod]
-        public void RemoveTwo_CheckCountThree()
+        public void Remove_Two_CheckCountThree()
         {
             CustomList<int> numbers = new CustomList<int>();
             int expected = 3;
@@ -285,7 +285,7 @@ namespace CustomListClassTests
         }
 
         [TestMethod]
-        public void RemoveThree_CheckCountTwo()
+        public void Remove_Three_CheckCountTwo()
         {
             CustomList<int> numbers = new CustomList<int>();
             int expected = 2;
@@ -307,7 +307,7 @@ namespace CustomListClassTests
         }
 
         [TestMethod]
-        public void RemoveFour_CheckCountOne()
+        public void Remove_Four_CheckCountOne()
         {
             CustomList<int> numbers = new CustomList<int>();
             int expected = 1;
@@ -330,7 +330,7 @@ namespace CustomListClassTests
         }
 
         [TestMethod]
-        public void RemoveFive_CheckCountZero()
+        public void Remove_Five_CheckCountZero()
         {
             CustomList<int> numbers = new CustomList<int>();
             int expected = 0;
@@ -354,7 +354,7 @@ namespace CustomListClassTests
         }
 
         [TestMethod]
-        public void RemoveOne_CheckIndexThree()
+        public void Remove_One_CheckIndexThree()
         {
             // arrange
             CustomList<int> numbers = new CustomList<int>();
@@ -377,7 +377,7 @@ namespace CustomListClassTests
         }
 
         [TestMethod]
-        public void RemoveTwo_CheckIndexTwo()
+        public void Remove_Two_CheckIndexTwo()
         {
             CustomList<int> numbers = new CustomList<int>();
             int expected = 5;
@@ -398,7 +398,7 @@ namespace CustomListClassTests
         }
 
         [TestMethod]
-        public void RemoveThree_CheckIndexOne()
+        public void Remove_Three_CheckIndexOne()
         {
             CustomList<int> numbers = new CustomList<int>();
             int expected = 5;
@@ -420,7 +420,7 @@ namespace CustomListClassTests
         }
 
         [TestMethod]
-        public void RemoveFour_CheckIndexZero()
+        public void Remove_Four_CheckIndexZero()
         {
             CustomList<int> numbers = new CustomList<int>();
             int expected = 5;
@@ -444,7 +444,7 @@ namespace CustomListClassTests
 
         [TestMethod]
         [ExpectedException(typeof(IndexOutOfRangeException))]
-        public void RemoveFive_CheckIndex()
+        public void Remove_Five_CheckIndex()
         {
             CustomList<int> numbers = new CustomList<int>();
             string expected = null;
@@ -468,7 +468,7 @@ namespace CustomListClassTests
         }
 
         [TestMethod]
-        public void RemoveDuplicate_CheckIndex()
+        public void Remove_FirstDuplicate_CheckIndex()
         {
             CustomList<int> numbers = new CustomList<int>();
             int expected = 22;
@@ -488,10 +488,60 @@ namespace CustomListClassTests
         }
 
         [TestMethod]
-        public void ToString_Test()
+        public void Add_OneNumber_ToString()
         {
+            CustomList<int> numbers = new CustomList<int>();
+            string expected = "1";
+            string actual;
 
+            numbers.Add(1);
+
+            actual = numbers.ToString();
+
+            Assert.AreEqual(expected, actual);
         }
 
+        [TestMethod]
+        public void Add_TwoNumbers_ToString()
+        {
+            CustomList<int> numbers = new CustomList<int>();
+            string expected = "2";
+            string actual;
+
+            numbers.Add(1);
+            numbers.Add(2);
+
+            actual = numbers.ToString();
+
+            Assert.AreEqual(expected, actual);
+        }
+
+        [TestMethod]
+        public void Add_OneWord_ToString()
+        {
+            CustomList<string> words = new CustomList<string>();
+            string expected = "hello";
+            string actual;
+
+            words.Add("hello");
+
+            actual = words.ToString();
+
+            Assert.AreEqual(expected, actual);
+        }
+
+        public void Add_TwoWords_ToString()
+        {
+            CustomList<string> words = new CustomList<string>();
+            string expected = "hello there!";
+            string actual;
+
+            words.Add("hello ");
+            words.Add("there!");
+
+            actual = words.ToString();
+
+            Assert.AreEqual(expected, actual);
+        }
     }
 }

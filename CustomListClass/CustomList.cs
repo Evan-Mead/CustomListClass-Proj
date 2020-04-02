@@ -20,6 +20,19 @@ namespace CustomListClass
             items = new T[Capacity];
         }
 
+        public override string ToString()
+        {
+            string userInput = "";
+            if (Count > 0)
+            {
+                for (int i = 0; i < Count; i++)
+                {
+                    userInput = items[i].ToString() + "";
+                }
+            }
+            return userInput;
+        }
+
         public T this[int index]
         {
             get
