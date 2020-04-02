@@ -117,7 +117,7 @@ namespace CustomListClass
         public static CustomList<T> operator+ (CustomList<T> listOne, CustomList<T> ListTwo)
         {
             CustomList<T> customList = new CustomList<T>();
-            customList = customList.Add.listOne + ListTwo;
+            customList = listOne + ListTwo;
             return customList;
         }
     }
