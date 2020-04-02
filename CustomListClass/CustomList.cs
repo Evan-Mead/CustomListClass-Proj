@@ -24,11 +24,25 @@ namespace CustomListClass
         {
             get
             {
-                return items[index];
+                if (Count ==  0 || index >= Count)
+                {
+                    throw new IndexOutOfRangeException();
+                }
+                else
+                {
+                    return items[index];
+                }
             }
             set
             {
-                items[index] = value;
+                if (Count == 0 || index >= Count)
+                {
+                    throw new IndexOutOfRangeException();
+                }
+                else
+                {
+                    items[index] = value;
+                }
             }
         }
 
@@ -61,6 +75,30 @@ namespace CustomListClass
             Count++;
         }
 
-        
+        public void Remove(T RemoveValue)
+        {
+            int removeItem = -1;
+            for (int i = 0; i < Count; i++)
+            {
+                if (items[i].Equals(RemoveValue))
+                {
+                    removeItem = i;
+                    break;
+                }
+            }
+
+            if (removeItem >= 0)
+            {
+                for (int j = removeItem; j < Count; j++)
+                {
+                    if (Count - 1 != j)
+                    {
+                        items[j] = items[j + 1];
+                    }
+                }
+                Count--;
+            }
+
+        }
     }
 }

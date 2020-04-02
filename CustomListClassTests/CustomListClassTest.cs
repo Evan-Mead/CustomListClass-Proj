@@ -299,7 +299,7 @@ namespace CustomListClassTests
 
             numbers.Remove(5);
             numbers.Remove(4);
-            numbers.remove(3);
+            numbers.Remove(3);
 
             actual = numbers.Count;
 
@@ -344,7 +344,7 @@ namespace CustomListClassTests
 
             numbers.Remove(5);
             numbers.Remove(4);
-            numbers.remove(3);
+            numbers.Remove(3);
             numbers.Remove(2);
             numbers.Remove(1);
 
@@ -443,10 +443,11 @@ namespace CustomListClassTests
         }
 
         [TestMethod]
+        [ExpectedException(typeof(IndexOutOfRangeException))]
         public void RemoveFive_CheckIndex()
         {
             CustomList<int> numbers = new CustomList<int>();
-            int expected = 0;
+            string expected = null;
             int actual;
 
             numbers.Add(1);
@@ -465,5 +466,32 @@ namespace CustomListClassTests
 
             Assert.AreEqual(expected, actual);
         }
+
+        [TestMethod]
+        public void RemoveDuplicate_CheckIndex()
+        {
+            CustomList<int> numbers = new CustomList<int>();
+            int expected = 22;
+            int actual;
+
+            numbers.Add(22);
+            numbers.Add(2);
+            numbers.Add(9);
+            numbers.Add(22);
+            numbers.Add(8);
+
+            numbers.Remove(22);
+
+            actual = numbers[2];
+
+            Assert.AreEqual(expected, actual);
+        }
+
+        [TestMethod]
+        public void ToString_Test()
+        {
+
+        }
+
     }
 }
