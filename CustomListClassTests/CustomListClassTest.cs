@@ -544,6 +544,22 @@ namespace CustomListClassTests
             Assert.AreEqual(expected, actual);
         }
 
+        [TestMethod]
+        public void Plus_Operator_Test()
+        {
+            // arrange
+            CustomList<string> words = new CustomList<string>();
+            CustomList<int> listOne = { 1, 2, 3 };
+            CustomList<int> listTwo = { 4, 5, 6 };
+            CustomList<int> customList = { 1, 2, 3, 4, 5, 6 };
+            string expected = "1, 2, 3, 4, 5, 6";
+            string actual;
 
+            // act
+            actual = customList.Add;
+
+            // assert
+            Assert.AreEqual(expected, actual);
+        }
     }
 }
